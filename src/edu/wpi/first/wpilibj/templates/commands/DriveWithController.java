@@ -14,6 +14,7 @@ public class DriveWithController extends CommandBase{
     public DriveWithController() {
         // Use requires() here to declare subsystem dependencies
         requires(driveTrain);
+        
     }
     
     //Called just before this Command runs the first time
@@ -22,7 +23,7 @@ public class DriveWithController extends CommandBase{
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-        driveTrain.roboDrive(oi.getLeftSpeed(), oi.getRightSpeed());
+        driveTrain.roboTestDrive(-oi.getY1Axis(), oi.getX1Axis(), oi.getZ1Speed());
         
     }
 

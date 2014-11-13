@@ -5,23 +5,26 @@
  */
 package edu.wpi.first.wpilibj.templates.subsystems;
 import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.templates.RobotMap;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.templates.commands.ExampleCommand;
+import edu.wpi.first.wpilibj.templates.commands.Climb;
 /**
  *
  * @author 200198
  */
 public class Climber extends Subsystem {
-    DoubleSolenoid climberArm = new DoubleSolenoid(1,2);
+    DoubleSolenoid climberArm = new DoubleSolenoid(RobotMap.climberArm1,RobotMap.climberArm2);
+
     
     
     
     public void initDefaultCommand() {
-        setDefaultCommand(new ExampleCommand());
+        setDefaultCommand(new Climb());
     }
     
     public void armForward() {
-        climberArm.set(DoubleSolenoid.Value.kForward);
+        
     }
     
     public void armOff() {

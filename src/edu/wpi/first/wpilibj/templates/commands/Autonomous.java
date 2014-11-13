@@ -23,7 +23,7 @@ public class Autonomous extends CommandBase {
     protected void execute() {
         
         if (limitSwitch.get()){
-            driveTrain.roboDrive(-0.5, 0);
+            driveTrain.roboTestDrive(-0.5, 0,0);
         }
         else {
             shooter.armForward();
@@ -36,7 +36,7 @@ public class Autonomous extends CommandBase {
         
     }
     protected void interrupted() {
-        driveTrain.roboDrive(0, 0);
+        driveTrain.roboTestDrive(0, 0,0);
         shooter.armOff();
     }
 }

@@ -25,6 +25,7 @@ import edu.wpi.first.wpilibj.templates.commands.ExampleCommand;
 public class RobotTemplate extends IterativeRobot {
 
     Command autonomousCommand;
+    Command teleopCommand;
 
     /**
      * This function is run when the robot is first started up and should be
@@ -56,6 +57,7 @@ public class RobotTemplate extends IterativeRobot {
         // continue until interrupted by another command, remove
         // this line or comment it out.
         autonomousCommand.cancel();
+        
     }
 
     /**

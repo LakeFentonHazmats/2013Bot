@@ -6,18 +6,21 @@
 package edu.wpi.first.wpilibj.templates.subsystems;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
+import edu.wpi.first.wpilibj.templates.RobotMap;
 import edu.wpi.first.wpilibj.templates.commands.ExampleCommand;
+import edu.wpi.first.wpilibj.templates.commands.Shoot;
 /**
  *
  * @author 200198
  */
 public class Shooter extends Subsystem{
-    DoubleSolenoid shooterArm = new DoubleSolenoid(1,2);
+    DoubleSolenoid shooterArm = new DoubleSolenoid(RobotMap.shooterArm1,RobotMap.shooterArm2);
+
     
     
     
     public void initDefaultCommand() {
-        setDefaultCommand(new ExampleCommand());
+        setDefaultCommand(new Shoot());
     }
     
     public void armForward() {
