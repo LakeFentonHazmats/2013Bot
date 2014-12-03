@@ -20,7 +20,7 @@ public class Autonomous extends CommandBase {
     protected void initialize() {
         servo.set(1);
 }
-    protected void execute() {
+    tear
         
         if (limitSwitch.get()){
             driveTrain.roboTestDrive(-0.5, 0,0);
