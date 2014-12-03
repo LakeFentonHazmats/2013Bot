@@ -26,7 +26,7 @@ public class RobotMap {
     public static final int shooterArm2 = 2;
     
     public static final int climberArm1 = 7;
-    public static final int climberArm2 = 8;
+    public static final int climberArm2 = 8;A
     // If you are using multiple modules, make sure to define both the port
     // number and the module. For example you with a rangefinder:
     // public static final int rangefinderPort = 1;
